@@ -58,6 +58,7 @@ export const orderedProjects = [...projectsData].sort((a, b) => {
 
 // Source video file dates, newest first, verified from the original Videos folder.
 export const videoAdDisplayOrder = [
+  "ugc-uvola",
   "ugc-trimrx-2",
   "pixar-smooche",
   "ugc-trimrx",
@@ -109,7 +110,7 @@ export const impactMetrics = [
     eyebrow: "02 / AD CREATIVE",
     value: String(videoAdsData.length),
     unit: "commercial ads",
-    description: "Eight UGC spots and three Pixar-style animated ads.",
+    description: "Nine UGC spots and three Pixar-style animated ads.",
     href: "#films",
     action: "Watch the full ad reel",
   },

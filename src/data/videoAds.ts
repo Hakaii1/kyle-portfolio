@@ -14,6 +14,20 @@ export interface VideoAdItem {
 
 export const videoAdsData: VideoAdItem[] = [
   {
+    id: "ugc-uvola",
+    title: "Uvola Trial Task",
+    brand: "Uvola",
+    category: "ugc",
+    categoryLabel: "UGC Social Creative",
+    videoUrl: "/assets/video-web/films/Uvola%20Trial%20Task.mp4",
+    description:
+      "UGC-style trial task video created for Uvola and presented as social-first brand creative.",
+    aspect: "9:16 Vertical HD",
+    tags: ["UGC", "Uvola", "Trial Task"],
+    creativePipeline: "UGC production for social media.",
+    marketingHook: "Creator-led brand storytelling for Uvola.",
+  },
+  {
     id: "ugc-keyla",
     title: "Keyla Perfume Body Butter",
     brand: "Keyla Fragrances",
