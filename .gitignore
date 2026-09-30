@@ -20,6 +20,9 @@
 # production
 /build
 
+# Local source videos; optimized copies are tracked in public/assets/video-web/films.
+/media-originals/
+
 # misc
 .DS_Store
 *.pem
