@@ -14,6 +14,20 @@ export interface VideoAdItem {
 
 export const videoAdsData: VideoAdItem[] = [
   {
+    id: "ugc-clairon",
+    title: "Clairon Intertrigo Relief Cream",
+    brand: "Clairon",
+    category: "ugc",
+    categoryLabel: "UGC Social Creative",
+    videoUrl: "/assets/video-web/films/ugc-clairon.mp4",
+    description:
+      "Caption-led vertical ad for Clairon Intertrigo Relief Cream, combining skin-care visuals, product application, and a clear branded reveal.",
+    aspect: "9:16 Vertical HD",
+    tags: ["Skincare Ad", "Captioned Creative", "Product Reveal"],
+    creativePipeline: "Macro skin imagery, lifestyle scenes, on-screen captions, and close-up product shots.",
+    marketingHook: "Opens with a close-up skin concern before introducing the product.",
+  },
+  {
     id: "ugc-uvola",
     title: "Uvola Trial Task",
     brand: "Uvola",
