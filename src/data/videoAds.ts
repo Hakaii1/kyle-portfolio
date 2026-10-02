@@ -29,7 +29,7 @@ export const videoAdsData: VideoAdItem[] = [
   },
   {
     id: "ugc-uvola",
-    title: "Uvola Trial Task",
+    title: "Uvola Ad",
     brand: "Uvola",
     category: "ugc",
     categoryLabel: "UGC Social Creative",
