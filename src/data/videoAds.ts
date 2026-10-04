@@ -14,6 +14,20 @@ export interface VideoAdItem {
 
 export const videoAdsData: VideoAdItem[] = [
   {
+    id: "ugc-luvain",
+    title: "Luvain Astaxantina Ad",
+    brand: "Luvain",
+    category: "ugc",
+    categoryLabel: "UGC Social Creative",
+    videoUrl: "/assets/video-web/films/ugc-luvain.mp4",
+    description:
+      "Italian-language creator-led ad for Luvain Astaxantina, combining a direct-to-camera pitch, ingredient imagery, product shots, and an offer-led close.",
+    aspect: "9:16 Vertical HD",
+    tags: ["Italian UGC", "Supplement Creative", "Talking Head", "Product Reveal"],
+    creativePipeline: "Talking-head delivery, Italian on-screen captions, science-inspired visuals, and product-focused cuts.",
+    marketingHook: "Opens with a bold 'Don't buy' line from the creator.",
+  },
+  {
     id: "ugc-clairon",
     title: "Clairon Intertrigo Relief Cream",
     brand: "Clairon",

@@ -58,6 +58,7 @@ export const orderedProjects = [...projectsData].sort((a, b) => {
 
 // Newest ad work first.
 export const videoAdDisplayOrder = [
+  "ugc-luvain",
   "ugc-clairon",
   "ugc-uvola",
   "ugc-trimrx-2",
@@ -111,7 +112,7 @@ export const impactMetrics = [
     eyebrow: "02 / AD CREATIVE",
     value: String(videoAdsData.length),
     unit: "commercial ads",
-    description: "Ten UGC spots and three Pixar-style animated ads.",
+    description: "Eleven UGC spots and three Pixar-style animated ads.",
     href: "#films",
     action: "Watch the full ad reel",
   },
