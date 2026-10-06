@@ -11,10 +11,10 @@ export default function Home() {
     <>
       <Hero />
       <ImpactStrip />
-      <Projects />
       <AiVideoAds />
-      <Experience />
       <TechStack />
+      <Projects />
+      <Experience />
       <Footer />
     </>
   );

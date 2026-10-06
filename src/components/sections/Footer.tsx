@@ -43,9 +43,9 @@ export default function Footer() {
           <div>
             <p className="eyebrow">06 · Contact</p>
             <h2 id="contact-title">
-              Have a system to improve
+              Let’s make an ad
               <br />
-              <em>or a story to sharpen?</em>
+              <em>for your brand.</em>
             </h2>
           </div>
           <div className="contact-panel">
@@ -53,9 +53,21 @@ export default function Footer() {
               <span className="status-dot" aria-hidden="true" />
               <div>
                 <strong>{siteConfig.availability}</strong>
-                <span>Full-time · Contract · Remote</span>
+                <span>AI ad creative · Freelance · Remote</span>
               </div>
             </div>
+
+            <p className="contact-brief">
+              Send your product link, script or brief, preferred format, and
+              deadline. We’ll agree on deliverables, revisions, and pricing
+              before production begins.
+            </p>
+            <a
+              className="button"
+              href={`mailto:${siteConfig.email}?subject=AI%20ad%20project%20enquiry`}
+            >
+              Discuss your ad project
+            </a>
 
             <a className="email-link" href={`mailto:${siteConfig.email}`}>
               <Mail aria-hidden="true" size={19} />

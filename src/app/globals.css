@@ -246,6 +246,17 @@ a {
   font-size: 0.82rem;
 }
 
+.button--secondary {
+  border-color: var(--line-strong);
+  background: transparent;
+  color: var(--text);
+  cursor: pointer;
+}
+
+.button--secondary:hover {
+  background: var(--accent-wash);
+}
+
 .menu-toggle {
   display: none;
   width: 2.7rem;
@@ -258,6 +269,10 @@ a {
 }
 
 .mobile-nav {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  left: 0;
   display: grid;
   max-height: 0;
   overflow: hidden;
@@ -483,7 +498,7 @@ a {
 .impact-strip {
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
-  padding-block: clamp(3rem, 5.5vw, 5.25rem);
+  padding-block: clamp(2rem, 4vw, 3.5rem);
 }
 
 .impact-heading {
@@ -495,7 +510,7 @@ a {
 
 .impact-heading h2 {
   margin: 0;
-  font-size: clamp(2.5rem, 5.1vw, 5rem);
+  font-size: clamp(2rem, 3.6vw, 3.5rem);
   font-weight: 610;
   letter-spacing: -0.065em;
   line-height: 0.98;
@@ -518,7 +533,7 @@ a {
 
 .impact-card {
   display: flex;
-  min-height: 21rem;
+  min-height: 17rem;
   flex-direction: column;
   align-items: flex-start;
   border: 1px solid var(--line);
@@ -532,7 +547,7 @@ a {
   border-color: rgba(182, 173, 255, 0.48);
 }
 
-.impact-card--crm {
+.impact-card--production {
   border-color: rgba(182, 173, 255, 0.28);
   background:
     radial-gradient(circle at 100% 0%, rgba(114, 92, 255, 0.14), transparent 55%),
@@ -567,7 +582,7 @@ a {
   white-space: nowrap;
 }
 
-.impact-card--crm .impact-figure strong {
+.impact-card--production .impact-figure strong {
   color: var(--accent-light);
   font-size: clamp(2.25rem, 3.9vw, 4.25rem);
 }
@@ -1025,7 +1040,7 @@ a {
 }
 
 .film-grid--ugc {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .film-grid--all > .film-ad--landscape {
@@ -1058,6 +1073,35 @@ a {
   color: var(--muted);
   font-size: 0.82rem;
   line-height: 1.65;
+}
+
+.film-section-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 2rem;
+  border-top: 1px solid var(--line);
+  padding-top: 1.5rem;
+}
+
+.film-enquiry {
+  display: grid;
+  gap: 0.25rem;
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.film-enquiry a {
+  color: var(--accent-light);
+  font-weight: 650;
+}
+
+.film-enquiry a:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.25rem;
 }
 
 .film-card dl {
@@ -1277,6 +1321,19 @@ a {
   align-self: center;
   border-top: 1px solid var(--line-strong);
   padding-top: 1.3rem;
+}
+
+.contact-brief {
+  margin: 0 0 1.3rem;
+  color: var(--muted);
+  font-size: 0.92rem;
+  line-height: 1.7;
+}
+
+.contact-panel > .button {
+  display: flex;
+  width: fit-content;
+  margin-bottom: 1.3rem;
 }
 
 .contact-availability {
@@ -1698,7 +1755,11 @@ a {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .impact-card--crm {
+  .impact-grid > .reveal:has(.impact-card--production) {
+    grid-column: 1 / -1;
+  }
+
+  .impact-card--production {
     display: grid;
     grid-column: 1 / -1;
     grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
@@ -1707,23 +1768,23 @@ a {
     min-height: 15rem;
   }
 
-  .impact-card--crm .impact-eyebrow {
+  .impact-card--production .impact-eyebrow {
     grid-column: 1 / -1;
   }
 
-  .impact-card--crm .impact-figure {
+  .impact-card--production .impact-figure {
     grid-column: 1;
     grid-row: 2 / span 2;
     margin-block: 0;
     padding-top: 0;
   }
 
-  .impact-card--crm .impact-description {
+  .impact-card--production .impact-description {
     grid-column: 2;
     grid-row: 2;
   }
 
-  .impact-card--crm .impact-link {
+  .impact-card--production .impact-link {
     grid-column: 2;
     grid-row: 3;
     justify-self: start;
@@ -1812,10 +1873,10 @@ a {
   }
 
   .impact-card,
-  .impact-card--crm {
+  .impact-card--production {
     display: flex;
     grid-column: auto;
-    min-height: 16rem;
+    min-height: 12rem;
     padding: 1.5rem;
   }
 
@@ -1824,13 +1885,13 @@ a {
     padding-top: 0;
   }
 
-  .impact-card--crm .impact-figure {
+  .impact-card--production .impact-figure {
     margin-block: 1.25rem 0.9rem;
     padding-top: 0;
   }
 
-  .impact-card--crm .impact-description,
-  .impact-card--crm .impact-link {
+  .impact-card--production .impact-description,
+  .impact-card--production .impact-link {
     grid-column: auto;
     grid-row: auto;
   }
@@ -1853,7 +1914,8 @@ a {
     grid-column: auto;
   }
 
-  .film-grid {
+  .film-grid,
+  .film-grid--ugc {
     grid-template-columns: 1fr;
   }
 
@@ -1861,7 +1923,6 @@ a {
     grid-column: auto;
   }
 
-  .film-card dl,
   .film-card .tag-list {
     display: none;
   }

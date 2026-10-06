@@ -8,17 +8,17 @@ export const siteConfig = {
   email: "kylegulapa06@gmail.com",
   location: "Pampanga, Philippines",
   timezone: "UTC+8",
-  availability: "Available for hire",
+  availability: "Available for ad projects",
   resumeUrl: "/assets/Resume/KyleGulapa_Resume.pdf",
   githubUrl: "https://github.com/Hakaii1",
   linkedinUrl: "https://www.linkedin.com/in/kyle-eurie-gulapa/",
 } as const;
 
 export const navigation = [
-  { id: "work", label: "Work" },
   { id: "films", label: "AI Ads" },
+  { id: "capabilities", label: "Services" },
+  { id: "work", label: "Development" },
   { id: "experience", label: "Experience" },
-  { id: "capabilities", label: "Capabilities" },
 ] as const;
 
 export type ProjectFilter =
@@ -98,33 +98,33 @@ export const projectPosters: Record<string, string> = {
 
 export const impactMetrics = [
   {
-    id: "engineering",
-    eyebrow: "01 / ENGINEERING",
-    value: String(projectsData.length),
-    unit: "software projects",
-    description:
-      "Web, mobile, and enterprise tools shaped around practical workflows.",
-    href: "#work",
-    action: "Explore selected work",
-  },
-  {
     id: "advertising",
-    eyebrow: "02 / AD CREATIVE",
+    eyebrow: "01 / AD PORTFOLIO",
     value: String(videoAdsData.length),
-    unit: "commercial ads",
-    description: "Eleven UGC spots and three Pixar-style animated ads.",
+    unit: "ad examples",
+    description:
+      "Product videos across beauty, wellness, apparel, and consumer tech.",
     href: "#films",
-    action: "Watch the full ad reel",
+    action: "Explore the ad portfolio",
   },
   {
-    id: "crm",
-    eyebrow: "03 / SYSTEMS CASE STUDY",
-    value: "~40 → 20",
-    unit: "CRM fields",
+    id: "formats",
+    eyebrow: "02 / CREATIVE FORMATS",
+    value: String(new Set(videoAdsData.map((ad) => ad.category)).size),
+    unit: "visual styles",
+    description: "UGC-style social creative and stylized 3D product animation.",
+    href: "#films",
+    action: "Find your creative direction",
+  },
+  {
+    id: "production",
+    eyebrow: "03 / CREATIVE PRODUCTION",
+    value: "Brief → Ad",
+    unit: "visuals + editing",
     description:
-      "A sports-agency GoHighLevel schema consolidated with a decoupled three-stage workflow.",
-    href: "#work",
-    action: "See the GoHighLevel case study",
+      "AI scenes, product cutaways, captions, and sound built around your approved script.",
+    href: "#capabilities",
+    action: "See how I can help",
   },
 ] as const;
 
@@ -144,49 +144,38 @@ export const mediaBehavior = {
 export const capabilities = [
   {
     number: "01",
-    title: "Engineering",
+    title: "Creative direction",
     summary:
-      "Production-minded web and mobile systems with clear interfaces, secure data flows, and maintainable foundations.",
+      "Translate your product brief and approved script into a visual direction, scene plan, and product story.",
     skills: [
-      "HTML",
-      "CSS",
-      "JavaScript",
-      "React",
-      "PHP",
-      "Python",
-      "Java",
-      "MS SQL",
-      "Flutter",
-      "Dart",
-      "Next.js",
+      "Brief interpretation",
+      "Storyboarding",
+      "Visual references",
+      "Product storytelling",
     ],
   },
   {
     number: "02",
-    title: "Business automation",
+    title: "AI video production",
     summary:
-      "CRM architecture and operational workflows that turn fragmented records and manual handoffs into dependable systems.",
+      "Create AI-led spokesperson scenes, product cutaways, and stylized animation for your chosen ad format.",
     skills: [
-      "GoHighLevel",
-      "Workflow automation",
-      "Schema design",
-      "Webhook integrations",
-      "Data migration",
-      "Reporting tools",
+      "AI image direction",
+      "Generative video",
+      "UGC-style scenes",
+      "Stylized 3D animation",
     ],
   },
   {
     number: "03",
-    title: "AI creative",
+    title: "Editing & delivery",
     summary:
-      "Commercial video concepts built around product clarity, strong opening hooks, thoughtful pacing, and polished post-production.",
+      "Bring the scenes together with pacing, captions, voice, and sound, then export for the agreed placement.",
     skills: [
-      "AI image direction",
-      "Generative video",
-      "UGC concepts",
-      "3D-style animation",
-      "Editing & sound",
-      "Direct-response structure",
+      "Video editing",
+      "On-screen captions",
+      "Voice & sound",
+      "Vertical & landscape formats",
     ],
   },
 ] as const;

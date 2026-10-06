@@ -1,11 +1,11 @@
 "use client";
 
-import { FileText, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
 import { navigation, siteConfig } from "@/data/portfolio";
 
 export default function Navbar() {
-  const [activeSection, setActiveSection] = useState("work");
+  const [activeSection, setActiveSection] = useState("films");
   const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
@@ -57,17 +57,8 @@ export default function Navbar() {
         </div>
 
         <div className="nav-actions">
-          <a
-            className="resume-link"
-            href={siteConfig.resumeUrl}
-            target="_blank"
-            rel="noreferrer"
-          >
-            <FileText aria-hidden="true" size={16} />
-            Resume
-          </a>
           <a className="button button--small" href="#contact">
-            Contact
+            Start a project
           </a>
           <button
             className="menu-toggle"
@@ -85,6 +76,8 @@ export default function Navbar() {
       <div
         id="mobile-navigation"
         className={`mobile-nav${menuOpen ? " is-open" : ""}`}
+        aria-hidden={!menuOpen}
+        inert={!menuOpen}
       >
         {navigation.map((item, index) => (
           <a
@@ -93,13 +86,13 @@ export default function Navbar() {
             aria-current={activeSection === item.id ? "location" : undefined}
             onClick={() => setMenuOpen(false)}
           >
-            <span>0{index + 1}</span>
+            <span>{String(index + 2).padStart(2, "0")}</span>
             {item.label}
           </a>
         ))}
         <a href="#contact" onClick={() => setMenuOpen(false)}>
-          <span>05</span>
-          Contact
+          <span>06</span>
+          Start a project
         </a>
       </div>
     </header>

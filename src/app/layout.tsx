@@ -3,13 +3,18 @@ import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 
 export const metadata: Metadata = {
-  title: "Kyle Gulapa — Full-Stack Developer & AI Ads Specialist",
+  title: "Kyle Gulapa — AI Ads Specialist",
   description:
-    "Portfolio of Kyle Eurie Alvaro Gulapa, a full-stack developer and AI ads specialist building dependable web products and polished commercial video ads.",
+    "AI video ad portfolio of Kyle Gulapa. UGC-style product videos, stylized 3D ads, AI visuals, editing, and captions created around your brand's brief.",
   keywords: [
     "Kyle Gulapa",
-    "Full-Stack Developer",
     "AI Ads Specialist",
+    "AI Video Ads",
+    "UGC-Style Ads",
+    "Product Video Creative",
+    "AI Video Production",
+    "Video Editing Philippines",
+    "Full-Stack Developer",
     "GoHighLevel Automation",
     "Next.js Developer",
     "TypeScript",
@@ -18,9 +23,9 @@ export const metadata: Metadata = {
   authors: [{ name: "Kyle Gulapa" }],
   icons: { icon: "/favicon.svg" },
   openGraph: {
-    title: "Kyle Gulapa — Full-Stack Developer & AI Ads Specialist",
+    title: "Kyle Gulapa — AI Ads Specialist",
     description:
-      "Web products and commercial AI ads by Kyle Gulapa.",
+      "UGC-style product videos and stylized 3D ads. Explore AI ad creative by Kyle Gulapa and discuss your next project.",
     type: "website",
     locale: "en_US",
   },

@@ -7,15 +7,15 @@ export default function ImpactStrip() {
     <section className="impact-strip section-frame" aria-labelledby="impact-title">
       <div className="impact-heading">
         <div>
-          <p className="eyebrow">A closer look</p>
+          <p className="eyebrow">01 · Creative at a glance</p>
           <h2 id="impact-title">
-            Systems to use.
+            Product stories.
             <br />
-            Stories to watch.
+            Made with AI.
           </h2>
         </div>
         <p className="impact-intro">
-          Software, ad creative, and one real-world systems result—side by side.
+          UGC-style videos and stylized 3D ads, from your brief to the final edit.
         </p>
       </div>
 

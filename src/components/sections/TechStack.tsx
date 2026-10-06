@@ -11,12 +11,13 @@ export default function TechStack() {
       <Reveal>
         <header className="section-heading split-heading">
           <div>
-            <p className="eyebrow">05 · Capabilities</p>
-            <h2 id="capabilities-title">Three connected practices.</h2>
+            <p className="eyebrow">03 · Ad creative services</p>
+            <h2 id="capabilities-title">From brief to final edit.</h2>
           </div>
           <p>
-            Enough range to move from operational problem to working system—and
-            from product idea to a clear commercial story.
+            Share your product, approved script, and visual references. I handle
+            the creative production, with the scope and delivery date agreed
+            before we start.
           </p>
         </header>
       </Reveal>

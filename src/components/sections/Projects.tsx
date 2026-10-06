@@ -271,12 +271,12 @@ export default function Projects() {
       <Reveal>
         <header className="section-heading split-heading">
           <div>
-            <p className="eyebrow">02 · Selected work</p>
-            <h2 id="work-title">Systems with a reason to exist.</h2>
+            <p className="eyebrow">04 · Development & automation</p>
+            <h2 id="work-title">A technical foundation.</h2>
           </div>
           <p>
-            Product engineering, enterprise operations, and automation work shaped
-            around the real bottleneck—not the loudest feature request.
+            Alongside ad creative, I build web products and business automations.
+            Explore the software projects behind my technical background.
           </p>
         </header>
       </Reveal>

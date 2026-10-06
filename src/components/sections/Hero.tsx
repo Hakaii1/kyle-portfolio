@@ -21,26 +21,26 @@ export default function Hero() {
           </Reveal>
 
           <Reveal delay={70}>
-            <p className="hero-kicker">Full-stack developer · AI ads specialist</p>
+            <p className="hero-kicker">AI Ads Specialist</p>
             <h1 id="hero-title">
-              Engineering systems.
+              AI video ads.
               <br />
-              <em>Directing attention.</em>
+              <em>Made for your brand.</em>
             </h1>
           </Reveal>
 
           <Reveal delay={140}>
             <p className="hero-intro">
-              I’m Kyle Gulapa. I build dependable web products and produce
-              polished AI-led ads, bringing the same systems thinking to every
-              commercial project.
+              I’m Kyle Gulapa, an AI Ads Specialist creating UGC-style product
+              videos and stylized 3D ads. I turn your brief and script into
+              visuals, editing, captions, and sound.
             </p>
             <div className="hero-actions">
-              <a className="button" href="#work">
-                Explore selected work
+              <a className="button" href="#films">
+                Watch my ad work
               </a>
-              <a className="text-link" href="#films">
-                Watch AI Ads
+              <a className="text-link" href="#contact">
+                Discuss an ad project
               </a>
             </div>
           </Reveal>
@@ -58,7 +58,7 @@ export default function Hero() {
             />
             <figcaption>
               <span>Kyle Eurie Gulapa</span>
-              <span>Developer & Ads Specialist</span>
+              <span>AI Ads Specialist</span>
             </figcaption>
           </figure>
         </Reveal>

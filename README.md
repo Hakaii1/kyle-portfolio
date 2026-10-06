@@ -1,6 +1,6 @@
 # Kyle Gulapa — Portfolio
 
-A premium, single-page portfolio for Kyle Gulapa, presenting full-stack engineering, business automation, and AI commercial creative work.
+A single-page portfolio for Kyle Gulapa, led by AI ad creative, UGC-style product videos, and stylized 3D ads. Development and business automation work provide supporting technical context.
 
 ## Local development
 

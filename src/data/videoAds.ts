@@ -3,13 +3,13 @@ export interface VideoAdItem {
   title: string;
   brand: string;
   category: "ugc" | "pixar";
-  categoryLabel: "UGC Social Creative" | "Stylized 3D Animation";
+  categoryLabel: "UGC-style Ad" | "Stylized 3D Animation";
   videoUrl: string;
   description: string;
   aspect: "9:16 Vertical HD" | "16:9 Landscape HD";
   tags: string[];
-  creativePipeline: string;
-  marketingHook: string;
+  projectType?: string;
+  role?: string;
 }
 
 export const videoAdsData: VideoAdItem[] = [
@@ -18,56 +18,54 @@ export const videoAdsData: VideoAdItem[] = [
     title: "Luvain Astaxantina Ad",
     brand: "Luvain",
     category: "ugc",
-    categoryLabel: "UGC Social Creative",
+    categoryLabel: "UGC-style Ad",
     videoUrl: "/assets/video-web/films/ugc-luvain.mp4",
     description:
-      "Italian-language creator-led ad for Luvain Astaxantina, combining a direct-to-camera pitch, ingredient imagery, product shots, and an offer-led close.",
+      "An Italian-language spokesperson ad with ingredient visuals, product scenes, and on-screen captions.",
     aspect: "9:16 Vertical HD",
-    tags: ["Italian UGC", "Supplement Creative", "Talking Head", "Product Reveal"],
-    creativePipeline: "Talking-head delivery, Italian on-screen captions, science-inspired visuals, and product-focused cuts.",
-    marketingHook: "Opens with a bold 'Don't buy' line from the creator.",
+    tags: ["Italian Language", "Spokesperson", "Product Scenes"],
+    projectType: "Trial project · Client-supplied script",
+    role: "AI visuals, video editing, and on-screen captions.",
   },
   {
     id: "ugc-clairon",
     title: "Clairon Intertrigo Relief Cream",
     brand: "Clairon",
     category: "ugc",
-    categoryLabel: "UGC Social Creative",
+    categoryLabel: "UGC-style Ad",
     videoUrl: "/assets/video-web/films/ugc-clairon.mp4",
     description:
-      "Caption-led vertical ad for Clairon Intertrigo Relief Cream, combining skin-care visuals, product application, and a clear branded reveal.",
+      "A vertical skincare ad combining application scenes, product imagery, and on-screen captions.",
     aspect: "9:16 Vertical HD",
     tags: ["Skincare Ad", "Captioned Creative", "Product Reveal"],
-    creativePipeline: "Macro skin imagery, lifestyle scenes, on-screen captions, and close-up product shots.",
-    marketingHook: "Opens with a close-up skin concern before introducing the product.",
+    projectType: "Trial project · Client-supplied script",
+    role: "AI visuals, video editing, and on-screen captions.",
   },
   {
     id: "ugc-uvola",
     title: "Uvola Ad",
     brand: "Uvola",
     category: "ugc",
-    categoryLabel: "UGC Social Creative",
+    categoryLabel: "UGC-style Ad",
     videoUrl: "/assets/video-web/films/ugc-uvola.mp4",
     description:
-      "Creator-led UGC ad for Uvola combining a direct-to-camera opening, captioned lifestyle scenes, and product cutaways.",
+      "A spokesperson-led ad with lifestyle scenes, explanatory visuals, and product cutaways.",
     aspect: "9:16 Vertical HD",
     tags: ["Health UGC", "Talking Head", "Product Cutaways"],
-    creativePipeline: "Talking-head storytelling, supporting scenes, on-screen captions, and product cutaways.",
-    marketingHook: "Opens with a direct-to-camera line about liver health.",
+    projectType: "Trial project · Client-supplied script",
+    role: "AI visuals, video editing, and on-screen captions.",
   },
   {
     id: "ugc-keyla",
     title: "Keyla Perfume Body Butter",
     brand: "Keyla Fragrances",
     category: "ugc",
-    categoryLabel: "UGC Social Creative",
+    categoryLabel: "UGC-style Ad",
     videoUrl: "/assets/video-web/films/ugc-keyla.mp4",
     description:
-      "Conversational podcast-style UGC ad showcasing Keyla luxury perfume body butter — highlighting 12-hour scent longevity, high-retention direct-response framing, and luxury fragrance dupe positioning.",
+      "A conversational, podcast-style body butter ad with interview framing and on-screen captions.",
     aspect: "9:16 Vertical HD",
-    tags: ["Podcast UGC", "Luxury Body Butter", "High-Retention Hook", "D2C Direct-Response"],
-    creativePipeline: "AI voice synthesis, conversational interview framing, dynamic captions, and direct-response sound design.",
-    marketingHook: "Organic podcast dialogue format capturing attention within the first 2 seconds.",
+    tags: ["Podcast Style", "Body Care", "Captioned Creative"],
   },
   {
     id: "pixar-bedfoam",
@@ -77,25 +75,21 @@ export const videoAdsData: VideoAdItem[] = [
     categoryLabel: "Stylized 3D Animation",
     videoUrl: "/assets/video-web/films/pixar-bedfoam.mp4",
     description:
-      "Whimsical 3D stylized character animation demonstrating adaptive memory foam contouring and weightless spinal alignment with playful orchestral music pacing.",
+      "A playful sleep product ad using stylized 3D characters and a comfort-focused story.",
     aspect: "9:16 Vertical HD",
-    tags: ["Pixar 3D Aesthetic", "Character Cinema", "Commercial Storytelling", "Procedural Light"],
-    creativePipeline: "Midjourney character consistency, generative 3D shaders, procedural soft-body physics, and cinematic sound sync.",
-    marketingHook: "Emotional character connection paired with visceral demonstration of plush comfort.",
+    tags: ["Stylized 3D", "Character Animation", "Product Story"],
   },
   {
     id: "ugc-sneaker",
     title: "HyperStride Kinetic Runner",
     brand: "HyperStride Footwear",
     category: "ugc",
-    categoryLabel: "UGC Social Creative",
+    categoryLabel: "UGC-style Ad",
     videoUrl: "/assets/video-web/films/ugc-sneaker.mp4",
     description:
-      "High-energy streetwear UGC video ad emphasizing athletic sole traction, shock absorption, and modern urban lifestyle styling.",
+      "A footwear ad combining product details, streetwear scenes, and fast-paced editing.",
     aspect: "9:16 Vertical HD",
-    tags: ["Streetwear UGC", "E-Commerce", "Kinetic Hook", "Viral Format"],
-    creativePipeline: "Photorealistic shoe fabrication, camera track velocity, and fast-cut TikTok retention pacing.",
-    marketingHook: "Dynamic speed ramps and tactile pavement grip demonstrations.",
+    tags: ["Footwear", "Streetwear", "Product Details"],
   },
   {
     id: "pixar-nivea",
@@ -105,95 +99,81 @@ export const videoAdsData: VideoAdItem[] = [
     categoryLabel: "Stylized 3D Animation",
     videoUrl: "/assets/video-web/films/pixar-nivea.mp4",
     description:
-      "Animated brand commercial illustrating dermal hydration barriers, macro cellular moisturization, and playful character skincare routines.",
+      "A stylized 3D skincare ad featuring character routines and animated hydration imagery.",
     aspect: "9:16 Vertical HD",
-    tags: ["Pixar Animation", "Skincare Commercial", "Cellular VFX", "Brand Aesthetic"],
-    creativePipeline: "Micro-fluid particle dynamics, soft skin subsurface scattering, and brand color fidelity.",
-    marketingHook: "Scientific cellular moisturization visualized through charming character animation.",
+    tags: ["Stylized 3D", "Skincare", "Character Animation"],
   },
   {
     id: "ugc-headphone",
     title: "Sony XM5 Active Noise Isolation",
     brand: "Sony XM5 Audio",
     category: "ugc",
-    categoryLabel: "UGC Social Creative",
+    categoryLabel: "UGC-style Ad",
     videoUrl: "/assets/video-web/films/ugc-headphone.mp4",
     description:
-      "Consumer tech UGC creative demonstrating instant active noise cancellation, deep soundstage isolation, and daily commuting versatility.",
+      "A creator-style headphone ad with commuting scenes, product details, and audio-focused visuals.",
     aspect: "9:16 Vertical HD",
-    tags: ["Tech UGC", "Sound Engineering", "Product Demo", "Direct Response"],
-    creativePipeline: "Acoustic visualization overlays, photoreal metallic finishes, and creator-style pacing.",
-    marketingHook: "Sudden audio cut simulating silence when ANC is activated.",
+    tags: ["Consumer Tech", "Product Demo", "Lifestyle Scenes"],
   },
   {
     id: "ugc-moisturizer",
     title: "HydraGlow Moisture Crème",
     brand: "DermaGlow Skincare",
     category: "ugc",
-    categoryLabel: "UGC Social Creative",
+    categoryLabel: "UGC-style Ad",
     videoUrl: "/assets/video-web/films/ugc-moisturizer.mp4",
     description:
-      "D2C beauty UGC highlighting velvety texture spread, rapid non-greasy absorption, and natural morning routine skin illumination.",
+      "A moisturizer ad built around a morning skincare routine, texture close-ups, and product application.",
     aspect: "9:16 Vertical HD",
     tags: ["Beauty UGC", "Skincare Routine", "Macro Texture", "Ad Creative"],
-    creativePipeline: "Emulsion texture simulation, dewy light specular highlights, and natural daylight camera curves.",
-    marketingHook: "Extreme macro texture spread showing instant skin glow.",
   },
   {
     id: "ugc-tights",
     title: "Thermal Fleece Lined Tights",
     brand: "CozyFit Apparel",
     category: "ugc",
-    categoryLabel: "UGC Social Creative",
+    categoryLabel: "UGC-style Ad",
     videoUrl: "/assets/video-web/films/ugc-tights.mp4",
     description:
-      "Direct-response apparel UGC showing cold-weather comfort, 4-way stretch resilience, and sleek silhouette transitions for lifestyle social campaigns.",
+      "A winter apparel ad with fabric close-ups, styling transitions, and everyday comfort scenes.",
     aspect: "9:16 Vertical HD",
-    tags: ["Fashion UGC", "Apparel Conversion", "Macro Fabric", "Lifestyle Hook"],
-    creativePipeline: "Fabric stretch physics, organic home lighting, and rapid social media hook structure.",
-    marketingHook: "Comparison cut between freezing bare legs vs insulated fleece lining.",
+    tags: ["Fashion", "Fabric Details", "Lifestyle Scenes"],
   },
   {
     id: "ugc-serum",
     title: "Cellular Renewal Droplet Serum",
     brand: "Aura Botanics",
     category: "ugc",
-    categoryLabel: "UGC Social Creative",
+    categoryLabel: "UGC-style Ad",
     videoUrl: "/assets/video-web/films/ugc-serum.mp4",
     description:
-      "User-testimonial style UGC showcasing targeted dropper application, rapid epidermal penetration, and luminous complexion glow.",
+      "A creator-style serum ad featuring dropper application, texture details, and a skincare routine.",
     aspect: "9:16 Vertical HD",
-    tags: ["Serum UGC", "Anti-Aging Glow", "Liquid Droplet", "Social Creative"],
-    creativePipeline: "Viscous fluid physics, glass refractive realism, and high-CTR marketing angles.",
-    marketingHook: "Satisfying macro fluid droplet landing softly on bare skin.",
+    tags: ["Skincare", "Product Application", "Texture Details"],
   },
   {
     id: "ugc-trimrx",
     title: "TrimRx GLP-1 Habits",
     brand: "TrimRx",
     category: "ugc",
-    categoryLabel: "UGC Social Creative",
+    categoryLabel: "UGC-style Ad",
     videoUrl: "/assets/video-web/films/ugc-trimrx.mp4",
     description:
       "A creator-style TrimRx ad framed around weight-loss habits and GLP-1, with a phone-screen-led composition.",
     aspect: "16:9 Landscape HD",
     tags: ["UGC", "TrimRx", "Weight-Loss Habits"],
-    creativePipeline: "Creator-style product storytelling with on-screen captions.",
-    marketingHook: "Opens with a phone-forward setup and bold captions.",
   },
   {
     id: "ugc-trimrx-2",
     title: "TrimRx Delivery & Check-In",
     brand: "TrimRx",
     category: "ugc",
-    categoryLabel: "UGC Social Creative",
+    categoryLabel: "UGC-style Ad",
     videoUrl: "/assets/video-web/films/ugc-trimrx-2.mp4",
     description:
       "A second creator-style TrimRx ad built around a remote consultation and a delivery/check-in scene.",
     aspect: "16:9 Landscape HD",
     tags: ["UGC", "TrimRx", "Consultation"],
-    creativePipeline: "Creator-style scenes with on-screen captions.",
-    marketingHook: "Opens on a consultation-style scene.",
   },
   {
     id: "pixar-smooche",
@@ -206,7 +186,5 @@ export const videoAdsData: VideoAdItem[] = [
       "A stylized 3D character spot featuring a close-up skincare scene and on-screen captions.",
     aspect: "9:16 Vertical HD",
     tags: ["Stylized 3D", "Smooche", "Skincare"],
-    creativePipeline: "3D-style animation with caption-led framing.",
-    marketingHook: "Starts on a tightly framed character close-up.",
   },
 ];

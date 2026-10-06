@@ -9,34 +9,43 @@ type FilmFilter = "all" | "ugc" | "pixar";
 
 const filmFilters: ReadonlyArray<{ id: FilmFilter; label: string }> = [
   { id: "all", label: "All formats" },
-  { id: "ugc", label: "UGC ads" },
+  { id: "ugc", label: "UGC-style ads" },
   { id: "pixar", label: "3D animation" },
 ];
 
+const previewCount = 3;
+
 export default function AiVideoAds() {
   const [filter, setFilter] = useState<FilmFilter>("all");
+  const [expanded, setExpanded] = useState(false);
   const ugcCount = videoAdsData.filter((video) => video.category === "ugc").length;
   const pixarCount = videoAdsData.filter((video) => video.category === "pixar").length;
-  const visibleAds = useMemo(
+  const filteredAds = useMemo(
     () =>
       filter === "all"
         ? orderedVideoAds
         : orderedVideoAds.filter((video) => video.category === filter),
     [filter],
   );
+  const visibleAds = expanded ? filteredAds : filteredAds.slice(0, previewCount);
+
+  function selectFilter(nextFilter: FilmFilter) {
+    setFilter(nextFilter);
+    setExpanded(false);
+  }
 
   return (
     <section id="films" className="section-frame content-section film-section" aria-labelledby="films-title">
       <Reveal>
         <header className="section-heading split-heading">
           <div>
-            <p className="eyebrow">03 · AI Ads Studio</p>
-            <h2 id="films-title">Made to earn the next second.</h2>
+            <p className="eyebrow">02 · AI Ad Portfolio</p>
+            <h2 id="films-title">Selected ad work.</h2>
           </div>
           <p>
-            {ugcCount} UGC ads and {pixarCount} Pixar-style ads, spanning creator-led
-            stories and stylized 3D animation. Every ad loads only when you choose
-            to play it.
+            Explore {ugcCount} UGC-style ads and {pixarCount} stylized 3D ads,
+            from spokesperson-led product stories to character animation.
+            The three latest projects are shown first.
           </p>
         </header>
       </Reveal>
@@ -47,17 +56,17 @@ export default function AiVideoAds() {
             key={item.id}
             type="button"
             aria-pressed={filter === item.id}
-            onClick={() => setFilter(item.id)}
+            onClick={() => selectFilter(item.id)}
           >
             {item.label}
           </button>
         ))}
-        <span className="filter-count" aria-live="polite">
-          {visibleAds.length} ads
+        <span className="filter-count" role="status" aria-live="polite" aria-atomic="true">
+          Showing {visibleAds.length} of {filteredAds.length} ads
         </span>
       </div>
 
-      <div className={`film-grid film-grid--${filter}`}>
+      <div id="film-collection" className={`film-grid film-grid--${filter}`}>
         {visibleAds.map((film, index) => (
           <Reveal
             key={film.id}
@@ -82,16 +91,14 @@ export default function AiVideoAds() {
                 <h3>{film.title}</h3>
                 <p className="film-brand">{film.brand}</p>
                 <p>{film.description}</p>
-                <dl>
-                  <div>
-                    <dt>Hook</dt>
-                    <dd>{film.marketingHook}</dd>
-                  </div>
-                  <div>
-                    <dt>Pipeline</dt>
-                    <dd>{film.creativePipeline}</dd>
-                  </div>
-                </dl>
+                {film.role && (
+                  <dl>
+                    <div>
+                      <dt>My contribution</dt>
+                      <dd>{film.role}</dd>
+                    </div>
+                  </dl>
+                )}
                 <div className="tag-list">
                   {film.tags.slice(0, 3).map((tag) => (
                     <span key={tag}>{tag}</span>
@@ -101,6 +108,24 @@ export default function AiVideoAds() {
             </article>
           </Reveal>
         ))}
+      </div>
+
+      <div className="film-section-actions">
+        {filteredAds.length > previewCount && (
+          <button
+            type="button"
+            className="button button--secondary"
+            aria-controls="film-collection"
+            aria-expanded={expanded}
+            onClick={() => setExpanded((current) => !current)}
+          >
+            {expanded ? "Show fewer ads" : `View all ${filteredAds.length} ads`}
+          </button>
+        )}
+        <p className="film-enquiry">
+          Have a product and a brief?
+          <a href="#contact">Let’s talk about your next ad <span aria-hidden="true">↗</span></a>
+        </p>
       </div>
     </section>
   );

@@ -12,12 +12,12 @@ export default function Experience() {
       <Reveal>
         <header className="section-heading split-heading">
           <div>
-            <p className="eyebrow">04 · Experience & education</p>
-            <h2 id="experience-title">Built in real operating contexts.</h2>
+            <p className="eyebrow">05 · Experience & education</p>
+            <h2 id="experience-title">The background behind the work.</h2>
           </div>
           <p>
-            A computer science foundation paired with enterprise delivery across
-            manufacturing operations, internal tools, and applied security.
+            My computer science education and development experience bring a
+            structured approach to planning, production, and delivery.
           </p>
         </header>
       </Reveal>
