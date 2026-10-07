@@ -2,8 +2,8 @@ export interface VideoAdItem {
   id: string;
   title: string;
   brand: string;
-  category: "ugc" | "pixar";
-  categoryLabel: "UGC-style Ad" | "Stylized 3D Animation";
+  category: "ugc" | "pixar" | "vsl";
+  categoryLabel: "UGC-style Ad" | "Stylized 3D Animation" | "VSL Ad";
   videoUrl: string;
   description: string;
   aspect: "9:16 Vertical HD" | "16:9 Landscape HD";
@@ -13,6 +13,18 @@ export interface VideoAdItem {
 }
 
 export const videoAdsData: VideoAdItem[] = [
+  {
+    id: "vsl-halsostodet",
+    title: "Hälsostödet VSL Ad",
+    brand: "Hälsostödet",
+    category: "vsl",
+    categoryLabel: "VSL Ad",
+    videoUrl: "/assets/video-web/films/vsl-halsostodet.mp4",
+    description:
+      "A Swedish-language video sales letter combining everyday scenes, explanatory visuals, knee strap demonstrations, and on-screen captions.",
+    aspect: "9:16 Vertical HD",
+    tags: ["Swedish Language", "VSL", "Product Demonstration"],
+  },
   {
     id: "ugc-luvain",
     title: "Luvain Astaxantina Ad",

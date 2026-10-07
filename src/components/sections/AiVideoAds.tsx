@@ -5,11 +5,12 @@ import MediaPlayer from "@/components/shared/MediaPlayer";
 import Reveal from "@/components/shared/Reveal";
 import { orderedVideoAds, videoAdsData, videoPosters } from "@/data/portfolio";
 
-type FilmFilter = "all" | "ugc" | "pixar";
+type FilmFilter = "all" | "ugc" | "pixar" | "vsl";
 
 const filmFilters: ReadonlyArray<{ id: FilmFilter; label: string }> = [
   { id: "all", label: "All formats" },
   { id: "ugc", label: "UGC-style ads" },
+  { id: "vsl", label: "VSL ads" },
   { id: "pixar", label: "3D animation" },
 ];
 
@@ -20,6 +21,7 @@ export default function AiVideoAds() {
   const [expanded, setExpanded] = useState(false);
   const ugcCount = videoAdsData.filter((video) => video.category === "ugc").length;
   const pixarCount = videoAdsData.filter((video) => video.category === "pixar").length;
+  const vslCount = videoAdsData.filter((video) => video.category === "vsl").length;
   const filteredAds = useMemo(
     () =>
       filter === "all"
@@ -43,8 +45,8 @@ export default function AiVideoAds() {
             <h2 id="films-title">Selected ad work.</h2>
           </div>
           <p>
-            Explore {ugcCount} UGC-style ads and {pixarCount} stylized 3D ads,
-            from spokesperson-led product stories to character animation.
+            Explore {ugcCount} UGC-style ads, {vslCount} VSL {vslCount === 1 ? "ad" : "ads"},
+            and {pixarCount} stylized 3D ads, from product stories to character animation.
             The three latest projects are shown first.
           </p>
         </header>

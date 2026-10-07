@@ -58,6 +58,7 @@ export const orderedProjects = [...projectsData].sort((a, b) => {
 
 // Newest ad work first.
 export const videoAdDisplayOrder = [
+  "vsl-halsostodet",
   "ugc-luvain",
   "ugc-clairon",
   "ugc-uvola",
@@ -111,8 +112,8 @@ export const impactMetrics = [
     id: "formats",
     eyebrow: "02 / CREATIVE FORMATS",
     value: String(new Set(videoAdsData.map((ad) => ad.category)).size),
-    unit: "visual styles",
-    description: "UGC-style social creative and stylized 3D product animation.",
+    unit: "ad formats",
+    description: "UGC-style social creative, video sales letters, and stylized 3D product animation.",
     href: "#films",
     action: "Find your creative direction",
   },
