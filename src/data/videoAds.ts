@@ -24,6 +24,7 @@ export const videoAdsData: VideoAdItem[] = [
       "A Swedish-language video sales letter combining everyday scenes, explanatory visuals, knee strap demonstrations, and on-screen captions.",
     aspect: "9:16 Vertical HD",
     tags: ["Swedish Language", "VSL", "Product Demonstration"],
+    role: "Video editing, scriptwriting, and on-screen captions.",
   },
   {
     id: "ugc-luvain",
